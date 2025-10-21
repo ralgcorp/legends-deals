@@ -1,0 +1,21 @@
+{
+  "dealName": "ZKasino",
+  "dealToken": "ZKAS",
+  "coingeckoId": "zkasino",
+  "dealPrice": "0.0034",
+  "dealFee": "15%",
+  "dealRound": "Seed",
+  "dealNetwork": "BNB Chain",
+  "dealTGE": "07/05/2024",
+  "dealStatus": "scam",
+  "FDV": "$9M",
+  "vesting": "15% TGE, 3M cliff, 15M vesting",
+  "addresses": [
+    {
+      "address": "0xDb020F7AeD2159b888F31756c8da32a09334cD4B",
+      "totalTokens": "114,750",
+      "distributedTokens": "scam",
+      "remainingTokens": "scam"
+    }
+  ]
+}

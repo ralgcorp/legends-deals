@@ -1,0 +1,238 @@
+{
+  "dealName": "Web3Go (DIN)",
+  "dealToken": "DIN",
+  "coingeckoId": "din",
+  "dealPrice": "0.80",
+  "dealFee": "15%",
+  "dealRound": "Investors",
+  "dealVC": "Halving Capital",
+  "dealNetwork": "BNB Chain",
+  "dealTGE": "14/02/2024",
+  "dealStatus": "distributing",
+  "FDV": "$60M",
+  "vesting": "5% no TGE 3 meses de cliff e 24 meses",
+  "addresses": [
+    {
+      "address": "0x97305DE76e7Cac714770E96DAf439229b6C9cE55",
+      "totalTokens": "1,125.66",
+      "distributedTokens": 56.56,
+      "remainingTokens": "1,069.10"
+    },
+    {
+      "address": "0xde4a74bd15debae375d2fc9ce644ac1c6faaa6f4",
+      "totalTokens": "1,125.66",
+      "distributedTokens": 56.56,
+      "remainingTokens": "1,069.10"
+    },
+    {
+      "address": "0x27ced9c8d9d944435b589ce13f504e6f175cf672",
+      "totalTokens": "2,125.00",
+      "distributedTokens": 106.77,
+      "remainingTokens": "2,018.23"
+    },
+    {
+      "address": "0x6e709dae37d8ec9567c72151406886f966d4cb32",
+      "totalTokens": "1,062.50",
+      "distributedTokens": 53.39,
+      "remainingTokens": "1,009.11"
+    },
+    {
+      "address": "0x4427744b943aec8f4254654b72b13ecca4707018",
+      "totalTokens": "1,062.50",
+      "distributedTokens": 53.39,
+      "remainingTokens": "1,009.11"
+    },
+    {
+      "address": "0x02aa67ad3ba7c99e3f13180034050b84dcc4025a",
+      "totalTokens": "212.50",
+      "distributedTokens": 10.68,
+      "remainingTokens": "201.82"
+    },
+    {
+      "address": "0x76d09c248dd798482c51a302e46a4e097b654a17",
+      "totalTokens": "212.50",
+      "distributedTokens": 10.68,
+      "remainingTokens": "201.82"
+    },
+    {
+      "address": "0xab37b389a2a783c0cbfab1d07bfd594121071353",
+      "totalTokens": "318.75",
+      "distributedTokens": 16.02,
+      "remainingTokens": "302.73"
+    },
+    {
+      "address": "0x69ccee13f9791a9057f6bab57481e3f250f11650",
+      "totalTokens": "531.25",
+      "distributedTokens": 26.69,
+      "remainingTokens": "504.56"
+    },
+    {
+      "address": "0x5c793f227a45699538bd0f5a63be3cd8e69faef4",
+      "totalTokens": "2,125.00",
+      "distributedTokens": 106.77,
+      "remainingTokens": "2,018.23"
+    },
+    {
+      "address": "0xd65f1df33b5f80538e7fee0f12b13787f6d0a306",
+      "totalTokens": "318.75",
+      "distributedTokens": 16.02,
+      "remainingTokens": "302.73"
+    },
+    {
+      "address": "0x74e27e5f451cef1c177ebeaa8e07d74a7174a560",
+      "totalTokens": "1,062.50",
+      "distributedTokens": 53.39,
+      "remainingTokens": "1,009.11"
+    },
+    {
+      "address": "0xf6d43cfbcfc9915a59c815811892a0d08606cf2c",
+      "totalTokens": "318.75",
+      "distributedTokens": 16.02,
+      "remainingTokens": "302.73"
+    },
+    {
+      "address": "0x7e139c280a8a224785d8999dc224ccf09d55844f",
+      "totalTokens": "425.00",
+      "distributedTokens": 21.35,
+      "remainingTokens": "403.65"
+    },
+    {
+      "address": "0x8224a9ba4604f257b1ff401020c45c1ebc8a0e91",
+      "totalTokens": "1,487.50",
+      "distributedTokens": 74.74,
+      "remainingTokens": "1,412.76"
+    },
+    {
+      "address": "0x64ece32d026d1dd6a8ef830482befa47d2b2ee05",
+      "totalTokens": "212.50",
+      "distributedTokens": 10.68,
+      "remainingTokens": "201.82"
+    },
+    {
+      "address": "0x993e77bf43f03b964c4c51ebf2472e20b93cfb59",
+      "totalTokens": "2,125.00",
+      "distributedTokens": 106.77,
+      "remainingTokens": "2,018.23"
+    },
+    {
+      "address": "0xdb020f7aed2159b888f31756c8da32a09334cd4b",
+      "totalTokens": "531.25",
+      "distributedTokens": 26.69,
+      "remainingTokens": "504.56"
+    },
+    {
+      "address": "0x787c8ef4f482d2b2a2d13ea72fcf3296f3bf3317",
+      "totalTokens": "212.50",
+      "distributedTokens": 10.68,
+      "remainingTokens": "201.82"
+    },
+    {
+      "address": "0xda3d5d89c4398f49a7283aa86a83febeccab04ad",
+      "totalTokens": "531.25",
+      "distributedTokens": 26.69,
+      "remainingTokens": "504.56"
+    },
+    {
+      "address": "0x48da824b94daa2ec49b374fc0b1b1b0d00578870",
+      "totalTokens": "637.50",
+      "distributedTokens": 32.03,
+      "remainingTokens": "605.47"
+    },
+    {
+      "address": "0xba12bb8a91995c2a18a0de0083764d1d2fc9c22b",
+      "totalTokens": "212.50",
+      "distributedTokens": 10.68,
+      "remainingTokens": "201.82"
+    },
+    {
+      "address": "0x3ab3129c10dcf6e2e9ba58c63ba93edc819e7a9e",
+      "totalTokens": "1,062.50",
+      "distributedTokens": 53.39,
+      "remainingTokens": "1,009.11"
+    },
+    {
+      "address": "0xc26b9af0043afbb8d20f94b9b3c753aae7f2a3e9",
+      "totalTokens": "2,125.00",
+      "distributedTokens": 106.77,
+      "remainingTokens": "2,018.23"
+    },
+    {
+      "address": "0xc0b35fbd07525d8beac9541bba7a5372ddc4887f",
+      "totalTokens": "1,700.00",
+      "distributedTokens": 85.42,
+      "remainingTokens": "1,614.58"
+    },
+    {
+      "address": "0xd54a20fe797e6b67ff4b39da41a7fc14e507fe45",
+      "totalTokens": "531.25",
+      "distributedTokens": 26.69,
+      "remainingTokens": "504.56"
+    },
+    {
+      "address": "0xb5c6bf3d0d6e7d881819f0062ca01b0f858dda38",
+      "totalTokens": "2,125.00",
+      "distributedTokens": 106.77,
+      "remainingTokens": "2,018.23"
+    },
+    {
+      "address": "0xdc42f272a3bb0e10d3d2fba2f750694d6ff25bbf",
+      "totalTokens": "2,125.00",
+      "distributedTokens": 106.77,
+      "remainingTokens": "2,018.23"
+    },
+    {
+      "address": "0x8df544d7882aff2dd3b0416c07776ce8f798ea23",
+      "totalTokens": "425.00",
+      "distributedTokens": 21.35,
+      "remainingTokens": "403.65"
+    },
+    {
+      "address": "0x4ed6f3ab92ab303b958d2e18463e0d9a22a168d1",
+      "totalTokens": "531.25",
+      "distributedTokens": 26.69,
+      "remainingTokens": "504.56"
+    },
+    {
+      "address": "0xce35399fc2b3aba87d92613c6903a23ebb878a62",
+      "totalTokens": "1,062.50",
+      "distributedTokens": 53.39,
+      "remainingTokens": "1,009.11"
+    },
+    {
+      "address": "0x8a0de439e43ae1a5c9eb4a6d501d2514cf3be04d",
+      "totalTokens": "2,125.00",
+      "distributedTokens": 106.77,
+      "remainingTokens": "2,018.23"
+    },
+    {
+      "address": "0x569b2c72e927e5258e29e8581f2f2cc884380734",
+      "totalTokens": "2,125.00",
+      "distributedTokens": 106.77,
+      "remainingTokens": "2,018.23"
+    },
+    {
+      "address": "0xbea68c94f778440d88497c0d332c2b2dc25f8325",
+      "totalTokens": "531.25",
+      "distributedTokens": 26.69,
+      "remainingTokens": "504.56"
+    },
+    {
+      "address": "0x5239c72fc2a72c31d287fa4c27805a90dee25383",
+      "totalTokens": "425.00",
+      "distributedTokens": 21.35,
+      "remainingTokens": "403.65"
+    },
+    {
+      "address": "0x1064ef69146ab1a7fa71951fddb5ed29a956c921",
+      "totalTokens": "1,062.50",
+      "distributedTokens": 53.39,
+      "remainingTokens": "1,009.11"
+    },
+    {
+      "address": "0xeb728032bd6953b3c6cff0e2d8967f673663db82",
+      "totalTokens": "1,125.66",
+      "distributedTokens": 56.56,
+      "remainingTokens": "1,069.10"
+    }
+  ]
+}

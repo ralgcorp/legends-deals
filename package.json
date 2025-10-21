@@ -1,12 +1,14 @@
 {
-  "name": "deals",
-  "version": "0.1.0",
+  "name": "token-distribution-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard para consultar distribuição de tokens por carteira EVM",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "convert": "node scripts/convert-csv-to-json.js"
   },
   "dependencies": {
     "react": "19.1.0",

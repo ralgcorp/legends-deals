@@ -1,0 +1,21 @@
+{
+  "dealName": "Partisia",
+  "dealToken": "MPC",
+  "coingeckoId": "partisia-blockchain",
+  "dealPrice": "0.65",
+  "dealFee": "16.6%",
+  "dealRound": "TGE",
+  "dealNetwork": "BNB Chain",
+  "dealTGE": "18/03/2024",
+  "dealStatus": "completed",
+  "FDV": "$55M",
+  "vesting": "100% TGE",
+  "addresses": [
+    {
+      "address": "0xDb020F7AeD2159b888F31756c8da32a09334cD4B",
+      "totalTokens": "1,315",
+      "distributedTokens": "1,315",
+      "remainingTokens": "0"
+    }
+  ]
+}

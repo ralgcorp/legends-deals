@@ -1,0 +1,21 @@
+{
+  "dealName": "Runes Terminal",
+  "dealToken": "RUNI",
+  "coingeckoId": "runesterminal",
+  "dealPrice": "0.65",
+  "dealFee": "15%",
+  "dealRound": "Round 2",
+  "dealNetwork": "Bitcoin",
+  "dealTGE": "02/07/2024",
+  "dealStatus": "scam",
+  "FDV": "$12.2M",
+  "vesting": "20% no TGE e o restante em 5 mensais",
+  "addresses": [
+    {
+      "address": "0xDb020F7AeD2159b888F31756c8da32a09334cD4B",
+      "totalTokens": "1,177",
+      "distributedTokens": "scam",
+      "remainingTokens": "scam"
+    }
+  ]
+}

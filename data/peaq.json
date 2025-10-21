@@ -1,0 +1,141 @@
+{
+  "dealName": "Peaq",
+  "dealToken": "PEAQ",
+  "coingeckoId": "peaq-2",
+  "dealPrice": "0.079274",
+  "dealFee": "20%",
+  "dealRound": "Community",
+  "dealNetwork": "Arbitrum",
+  "dealTGE": "22/07/2024",
+  "dealStatus": "distributing",
+  "FDV": "$33M",
+  "vesting": "15% TGE, sem cliff e 6 meses de vesting",
+  "addresses": [
+    {
+      "address": "0xcd4338aa27dcd70a410be7ca4170cb8061042932",
+      "totalTokens": "2,018",
+      "distributedTokens": "2,018",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x8b557dd82bcd5fb96a952fbcfd9e6cfe31945876",
+      "totalTokens": "1,514",
+      "distributedTokens": "1,514",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x4427744b943aec8f4254654b72b13ecca4707018",
+      "totalTokens": "5,046",
+      "distributedTokens": "5,046",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xc26b9af0043afbb8d20f94b9b3c753aae7f2a3e9",
+      "totalTokens": "9,960",
+      "distributedTokens": "9,960",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xeb728032bd6953b3c6cff0e2d8967f673663db82",
+      "totalTokens": "11,178",
+      "distributedTokens": "11,178",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xcd33048C9C2E2AD28Bd1fAfed8c5b6d29A5aDA28",
+      "totalTokens": "1,019",
+      "distributedTokens": "1,019",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x2af0e796026bfab8846c665c6e954780367088dc",
+      "totalTokens": "2,018",
+      "distributedTokens": "2,018",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xda12ef6f5f1a051f4d0bb822325d81b4254cd44c",
+      "totalTokens": "2,018",
+      "distributedTokens": "2,018",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xbea68c94f778440d88497c0d332c2b2dc25f8325",
+      "totalTokens": "10,092",
+      "distributedTokens": "10,092",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x69ccee13f9791a9057f6bab57481e3f250f11650",
+      "totalTokens": "4,037",
+      "distributedTokens": "4,037",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x993e77bf43f03b964c4c51ebf2472e20b93cfb59",
+      "totalTokens": "10,092",
+      "distributedTokens": "10,092",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x27ced9c8d9d944435b589ce13f504e6f175cf672",
+      "totalTokens": "5,308",
+      "distributedTokens": "5,308",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xf6d43cfbcfc9915a59c815811892a0d08606cf2c",
+      "totalTokens": "2,018",
+      "distributedTokens": "2,018",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xc0b35fbd07525d8beac9541bba7a5372ddc4887f",
+      "totalTokens": "12,110",
+      "distributedTokens": "12,110",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x76d09c248dd798482c51a302e46a4e097b654a17",
+      "totalTokens": "3,027",
+      "distributedTokens": "3,027",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x569b2c72e927e5258e29e8581f2f2cc884380734",
+      "totalTokens": "4,037",
+      "distributedTokens": "4,037",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x787c8ef4f482d2b2a2d13ea72fcf3296f3bf3317",
+      "totalTokens": "5,207",
+      "distributedTokens": "5,207",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x02aa67ad3ba7c99e3f13180034050b84dcc4025a",
+      "totalTokens": "5,046",
+      "distributedTokens": "5,046",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0x31059e0728d1f82634fad23c487a1a2cfcaf7b6a",
+      "totalTokens": "1,009",
+      "distributedTokens": "1,009",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xb5c6bf3d0d6e7d881819f0062ca01b0f858dda38",
+      "totalTokens": "5,813",
+      "distributedTokens": "5,813",
+      "remainingTokens": 0
+    },
+    {
+      "address": "0xc01950ce0507bb32cacb27420724b60da7ab6940",
+      "totalTokens": "1,009",
+      "distributedTokens": "1,009",
+      "remainingTokens": 0
+    }
+  ]
+}

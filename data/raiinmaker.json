@@ -1,0 +1,148 @@
+{
+  "dealName": "Raiinmaker",
+  "dealToken": "RAIIN",
+  "coingeckoId": "raiinmaker",
+  "dealPrice": "0.33",
+  "dealFee": "15%",
+  "dealRound": "Private",
+  "dealNetwork": "BNB Chain",
+  "dealTGE": "22/07/2024",
+  "dealVC": "Halving Capital",
+  "dealStatus": "distributing",
+  "FDV": "$33M",
+  "vesting": "15% TGE, o restante ao longo de 10M",
+  "addresses": [
+    {
+      "address": "0xde4a74bd15debae375d2fc9ce644ac1c6faaa6f4",
+      "totalTokens": "4,205",
+      "distributedTokens": "",
+      "remainingTokens": "4,204.55"
+    },
+    {
+      "address": "0x27ced9c8d9d944435b589ce13f504e6f175cf672",
+      "totalTokens": "13,474",
+      "distributedTokens": "",
+      "remainingTokens": "13,473.79"
+    },
+    {
+      "address": "0x48da824b94daa2ec49b374fc0b1b1b0d00578870",
+      "totalTokens": "2,081",
+      "distributedTokens": "",
+      "remainingTokens": "2,081.21"
+    },
+    {
+      "address": "0xe5006519d0dab4c7aea1a645e4e2da543ef1fedd",
+      "totalTokens": "809",
+      "distributedTokens": "",
+      "remainingTokens": "808.79"
+    },
+    {
+      "address": "0x5c793f227a45699538bd0f5a63be3cd8e69faef4",
+      "totalTokens": "12,106",
+      "distributedTokens": "",
+      "remainingTokens": "12,106.06"
+    },
+    {
+      "address": "0xce35399fc2b3aba87d92613c6903a23ebb878a62",
+      "totalTokens": "5,152",
+      "distributedTokens": "",
+      "remainingTokens": "5,151.52"
+    },
+    {
+      "address": "0x787c8ef4f482d2b2a2d13ea72fcf3296f3bf3317",
+      "totalTokens": "1,288",
+      "distributedTokens": "",
+      "remainingTokens": "1,287.88"
+    },
+    {
+      "address": "0xb5c6bf3d0d6e7d881819f0062ca01b0f858dda38",
+      "totalTokens": "6,128",
+      "distributedTokens": "",
+      "remainingTokens": "6,127.73"
+    },
+    {
+      "address": "0xb1ab1bedba81171e448f0ced6c973b3d70205126",
+      "totalTokens": "1,131",
+      "distributedTokens": "",
+      "remainingTokens": "1,130.76"
+    },
+    {
+      "address": "0x6e709dae37d8ec9567c72151406886f966d4cb32",
+      "totalTokens": "12,750",
+      "distributedTokens": "",
+      "remainingTokens": "12,750.00"
+    },
+    {
+      "address": "0xeb728032bd6953b3c6cff0e2d8967f673663db82",
+      "totalTokens": "2,803",
+      "distributedTokens": "",
+      "remainingTokens": "2,803.03"
+    },
+    {
+      "address": "0x1064ef69146ab1a7fa71951fddb5ed29a956c921",
+      "totalTokens": "1,674",
+      "distributedTokens": "",
+      "remainingTokens": "1,674.24"
+    },
+    {
+      "address": "0x8df544d7882aff2dd3b0416c07776ce8f798ea23",
+      "totalTokens": "3,864",
+      "distributedTokens": "",
+      "remainingTokens": "3,863.64"
+    },
+    {
+      "address": "0xdc42f272a3bb0e10d3d2fba2f750694d6ff25bbf",
+      "totalTokens": "25,758",
+      "distributedTokens": "",
+      "remainingTokens": "25,757.58"
+    },
+    {
+      "address": "0x02aa67ad3ba7c99e3f13180034050b84dcc4025a",
+      "totalTokens": "1,288",
+      "distributedTokens": "",
+      "remainingTokens": "1,287.88"
+    },
+    {
+      "address": "0xc0b35fbd07525d8beac9541bba7a5372ddc4887f",
+      "totalTokens": "2,576",
+      "distributedTokens": "",
+      "remainingTokens": "2,575.76"
+    },
+    {
+      "address": "0x97305DE76e7Cac714770E96DAf439229b6C9cE55",
+      "totalTokens": "2,803",
+      "distributedTokens": "",
+      "remainingTokens": "2,803.03"
+    },
+    {
+      "address": "0x8a0de439e43ae1a5c9eb4a6d501d2514cf3be04d",
+      "totalTokens": "11,022",
+      "distributedTokens": "",
+      "remainingTokens": "11,021.67"
+    },
+    {
+      "address": "0x28f25009d5a1e96763ac1201a5a9a6f4fac16f63",
+      "totalTokens": "7,470",
+      "distributedTokens": "",
+      "remainingTokens": "7,469.70"
+    },
+    {
+      "address": "0x6c8dbcfc53db590b9a40ea793f84d495aec7062a",
+      "totalTokens": "1,288",
+      "distributedTokens": "",
+      "remainingTokens": "1,287.88"
+    },
+    {
+      "address": "0x569b2c72e927e5258e29e8581f2f2cc884380734",
+      "totalTokens": "5,152",
+      "distributedTokens": "",
+      "remainingTokens": "5,151.52"
+    },
+    {
+      "address": "0xd54a20fe797e6b67ff4b39da41a7fc14e507fe45",
+      "totalTokens": "1,314",
+      "distributedTokens": "",
+      "remainingTokens": "1,313.64"
+    }
+  ]
+}
