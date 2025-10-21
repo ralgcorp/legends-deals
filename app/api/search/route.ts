@@ -40,7 +40,10 @@ export async function GET(request: NextRequest) {
 
       // Search for the address in this deal (case-insensitive)
       const foundAddress = deal.addresses.find(
-        (addr) => addr.address.toLowerCase() === address.toLowerCase()
+        (addr) =>
+          addr.address &&
+          typeof addr.address === "string" &&
+          addr.address.toLowerCase() === address.toLowerCase()
       );
 
       if (foundAddress) {
