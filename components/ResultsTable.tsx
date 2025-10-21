@@ -319,7 +319,7 @@ export default function ResultsTable({
                               clipRule="evenodd"
                             />
                           </svg>
-                          Awaiting TGE
+                          Awaiting
                         </span>
                       </div>
                     )}
