@@ -9,7 +9,7 @@
   "dealTGE": "22/07/2024",
   "dealStatus": "distributing",
   "FDV": "$33M",
-  "vesting": "15% TGE, sem cliff e 6 meses de vesting",
+  "vesting": "15% TGE - 6M",
   "addresses": [
     {
       "address": "0xcd4338aa27dcd70a410be7ca4170cb8061042932",

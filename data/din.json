@@ -10,7 +10,7 @@
   "dealTGE": "14/02/2024",
   "dealStatus": "distributing",
   "FDV": "$60M",
-  "vesting": "5% no TGE 3 meses de cliff e 24 meses",
+  "vesting": "5% TGE - 3M cliff e 24M",
   "addresses": [
     {
       "address": "0x97305DE76e7Cac714770E96DAf439229b6C9cE55",

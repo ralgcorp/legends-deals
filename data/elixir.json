@@ -9,7 +9,7 @@
   "dealTGE": "07/03/2025",
   "dealStatus": "distributing",
   "FDV": "$58.5M",
-  "vesting": "3M cliff + 24M vesting",
+  "vesting": "3M cliff e 24M",
   "addresses": [
     {
       "address": "0x74e27e5f451cef1c177ebeaa8e07d74a7174a560",

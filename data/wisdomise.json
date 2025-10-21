@@ -10,7 +10,7 @@
   "dealTGE": "29/04/2024",
   "dealStatus": "phishing",
   "FDV": "$10M",
-  "vesting": "5% TGE + 6M Cliff + 15M",
+  "vesting": "5% TGE - 6M cliff e 15M",
   "addresses": [
     {
       "address": "0x6e709dae37d8ec9567c72151406886f966d4cb32",

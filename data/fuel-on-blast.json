@@ -8,7 +8,7 @@
   "dealTGE": "07/05/2024",
   "dealStatus": "distributing",
   "FDV": "$58.5M",
-  "vesting": "10% na TGE, 3M de cliff, 15M linear",
+  "vesting": "10% TGE - 3M cliff e 15M",
   "addresses": [
     {
       "address": "0xce35399fc2b3aba87d92613c6903a23ebb878a62",

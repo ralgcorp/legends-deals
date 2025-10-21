@@ -8,7 +8,7 @@
   "dealNetwork": "BNB Chain",
   "dealStatus": "awaiting TGE",
   "FDV": "$5.5M",
-  "vesting": "6% no TGE - 3M cliff e 14M linear",
+  "vesting": "6% TGE - 3M cliff e 14M",
 
   "addresses": [
     {

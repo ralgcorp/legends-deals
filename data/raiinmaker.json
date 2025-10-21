@@ -10,7 +10,7 @@
   "dealVC": "Halving Capital",
   "dealStatus": "distributing",
   "FDV": "$33M",
-  "vesting": "15% TGE, o restante ao longo de 10M",
+  "vesting": "15% TGE - 10M",
   "addresses": [
     {
       "address": "0xde4a74bd15debae375d2fc9ce644ac1c6faaa6f4",

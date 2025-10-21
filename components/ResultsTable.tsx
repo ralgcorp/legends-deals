@@ -277,7 +277,7 @@ export default function ResultsTable({
                       "-"
                     )}
                   </td>
-                  <td className="px-3 py-3 text-xs text-gray-700 max-w-xs">
+                  <td className="px-3 py-3 whitespace-nowrap text-xs text-gray-700 max-w-xs">
                     <div className="line-clamp-2" title={result.vesting}>
                       {result.vesting || "-"}
                     </div>

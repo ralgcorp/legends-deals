@@ -9,7 +9,7 @@
   "dealTGE": "17/04/2024",
   "dealStatus": "completed",
   "FDV": "$70M",
-  "vesting": "5% no TGE e o restante em 12 mensais",
+  "vesting": "5% TGE - 12M",
   "addresses": [
     {
       "address": "0xba12bb8a91995c2a18a0de0083764d1d2fc9c22b",
