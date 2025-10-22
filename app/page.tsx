@@ -1,16 +1,38 @@
 "use client";
 
-import { useState } from "react";
-import SearchBar from "@/components/SearchBar";
+import { useState, useEffect } from "react";
+import { useAuth } from "@/contexts/AuthContext";
 import ResultsTable from "@/components/ResultsTable";
 import { SearchResult } from "@/types";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const {
+    isConnected,
+    address,
+    disconnectWallet,
+    isLoading: authLoading,
+  } = useAuth();
+  const router = useRouter();
   const [results, setResults] = useState<SearchResult[]>([]);
   const [searchedAddress, setSearchedAddress] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string>("");
+
+  // Redirecionar para login se não estiver conectado
+  useEffect(() => {
+    if (!authLoading && !isConnected) {
+      router.push("/login");
+    }
+  }, [isConnected, authLoading, router]);
+
+  // Buscar dados automaticamente quando conectar
+  useEffect(() => {
+    if (isConnected && address) {
+      handleSearch(address);
+    }
+  }, [isConnected, address]);
 
   const handleSearch = async (address: string) => {
     setIsLoading(true);
@@ -36,20 +58,67 @@ export default function Home() {
     }
   };
 
+  const handleLogout = () => {
+    disconnectWallet();
+    router.push("/login");
+  };
+
+  // Mostrar loading enquanto verifica autenticação
+  if (authLoading) {
+    return (
+      <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <p className="mt-4 text-gray-600">Carregando...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Se não estiver conectado, não renderizar nada (será redirecionado)
+  if (!isConnected) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
-      <div className="container mx-auto px-6 py-12 max-w-[1600px]">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">
-            Distribuição de Tokens - Legends
-          </h1>
-          <p className="text-lg text-gray-600">
-            Consulte a distribuição de tokens pela sua carteira
-          </p>
+      {/* Header com botão de logout */}
+      <div className="bg-white shadow-sm">
+        <div className="max-w-[1600px] mx-auto px-6 py-4">
+          <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">
+                Distribuição de Tokens - Legends
+              </h1>
+              <p className="text-sm text-gray-600">
+                Carteira:{" "}
+                {address ? `${address.slice(0, 6)}...${address.slice(-4)}` : ""}
+              </p>
+            </div>
+            <button
+              onClick={handleLogout}
+              className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+            >
+              <svg
+                className="w-4 h-4 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                />
+              </svg>
+              Desconectar
+            </button>
+          </div>
         </div>
+      </div>
 
-        <SearchBar onSearch={handleSearch} isLoading={isLoading} />
-
+      <div className="container mx-auto px-6 py-12 max-w-[1600px]">
         {error && (
           <div className="w-full mx-auto mb-6">
             <div className="bg-red-50 border border-red-200 rounded-lg p-4">
