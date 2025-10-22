@@ -1,43 +1,33 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useAuth } from "@/contexts/AuthContext";
+import { useSearchParams, useRouter } from "next/navigation";
 import ResultsTable from "@/components/ResultsTable";
 import { SearchResult } from "@/types";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
-export default function Home() {
-  const {
-    isConnected,
-    address,
-    disconnectWallet,
-    isLoading: authLoading,
-  } = useAuth();
+export default function ResultsPage() {
+  const searchParams = useSearchParams();
   const router = useRouter();
   const [results, setResults] = useState<SearchResult[]>([]);
   const [searchedAddress, setSearchedAddress] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string>("");
 
-  // Redirecionar para login se não estiver conectado
   useEffect(() => {
-    if (!authLoading && !isConnected) {
+    const address = searchParams.get("address");
+    if (address) {
+      setSearchedAddress(address);
+      handleSearch(address);
+    } else {
+      // Se não há endereço, redirecionar para login
       router.push("/login");
     }
-  }, [isConnected, authLoading, router]);
-
-  // Buscar dados automaticamente quando conectar
-  useEffect(() => {
-    if (isConnected && address) {
-      handleSearch(address);
-    }
-  }, [isConnected, address]);
+  }, [searchParams, router]);
 
   const handleSearch = async (address: string) => {
     setIsLoading(true);
     setError("");
-    setSearchedAddress(address);
 
     try {
       const response = await fetch(
@@ -58,45 +48,27 @@ export default function Home() {
     }
   };
 
-  const handleLogout = () => {
-    disconnectWallet();
-    router.push("/login");
-  };
-
-  // Mostrar loading enquanto verifica autenticação
-  if (authLoading) {
-    return (
-      <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100 flex items-center justify-center">
-        <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-          <p className="mt-4 text-gray-600">Carregando...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Se não estiver conectado, não renderizar nada (será redirecionado)
-  if (!isConnected) {
-    return null;
-  }
-
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 to-gray-100">
-      {/* Header com botão de logout */}
+      {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="max-w-[1600px] mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">
-                Distribuição de Tokens - Legends
+                Resultados da Pesquisa
               </h1>
               <p className="text-sm text-gray-600">
-                Carteira:{" "}
-                {address ? `${address.slice(0, 6)}...${address.slice(-4)}` : ""}
+                Endereço:{" "}
+                {searchedAddress
+                  ? `${searchedAddress.slice(0, 6)}...${searchedAddress.slice(
+                      -4
+                    )}`
+                  : ""}
               </p>
             </div>
-            <button
-              onClick={handleLogout}
+            <Link
+              href="/login"
               className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
             >
               <svg
@@ -109,11 +81,11 @@ export default function Home() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 />
               </svg>
-              Desconectar
-            </button>
+              Voltar
+            </Link>
           </div>
         </div>
       </div>
