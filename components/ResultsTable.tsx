@@ -1,6 +1,7 @@
 "use client";
 
 import { SearchResult } from "@/types";
+import { useState, useMemo } from "react";
 
 interface ResultsTableProps {
   results: SearchResult[];
@@ -11,6 +12,22 @@ export default function ResultsTable({
   results,
   searchedAddress,
 }: ResultsTableProps) {
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
+
+  // Sort results by deal name
+  const sortedResults = useMemo(() => {
+    return [...results].sort((a, b) => {
+      const nameA = a.dealName?.toLowerCase() || "";
+      const nameB = b.dealName?.toLowerCase() || "";
+
+      if (sortOrder === "asc") {
+        return nameA.localeCompare(nameB);
+      } else {
+        return nameB.localeCompare(nameA);
+      }
+    });
+  }, [results, sortOrder]);
+
   const formatNumber = (num: number) => {
     return num.toLocaleString("pt-BR");
   };
@@ -121,7 +138,10 @@ export default function ResultsTable({
           <span className="font-semibold text-lg text-green-600">
             $
             {formatCurrency(
-              results.reduce((sum, result) => sum + (result.aporte || 0), 0)
+              sortedResults.reduce(
+                (sum, result) => sum + (result.aporte || 0),
+                0
+              )
             )}
           </span>
         </p>
@@ -132,9 +152,29 @@ export default function ResultsTable({
             <tr>
               <th
                 scope="col"
-                className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100 select-none"
+                onClick={() =>
+                  setSortOrder(sortOrder === "asc" ? "desc" : "asc")
+                }
               >
-                Deal
+                <div className="flex items-center gap-1">
+                  Deal
+                  <svg
+                    className={`w-4 h-4 transition-transform ${
+                      sortOrder === "asc" ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 15l7-7 7 7"
+                    />
+                  </svg>
+                </div>
               </th>
               <th
                 scope="col"
@@ -217,7 +257,7 @@ export default function ResultsTable({
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {results.map((result, index) => {
+            {sortedResults.map((result, index) => {
               const distributedPercentage = calculatePercentage(
                 result.distributedTokens,
                 result.totalTokens

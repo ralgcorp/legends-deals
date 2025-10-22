@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import ResultsTable from "@/components/ResultsTable";
+import Footer from "@/components/Footer";
 import { SearchResult } from "@/types";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -155,18 +155,7 @@ export default function Home() {
         )}
       </div>
 
-      <footer className="mt-8 pb-8 text-center text-sm text-gray-500">
-        <p>
-          {" "}
-          Os valores exibidos foram exportados da planilha Distribuição Deals
-          Racc compartilhada{" "}
-        </p>
-        <p>
-          {" "}
-          Os dados de Performance estão sendo obtidos através da API da
-          CoinGecko{" "}
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
