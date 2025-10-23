@@ -52,6 +52,8 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const address = searchParams.get("address");
 
+  console.log("Search API - Address:", address);
+
   if (!address) {
     return NextResponse.json(
       { error: "Address parameter is required" },
@@ -61,6 +63,7 @@ export async function GET(request: NextRequest) {
 
   try {
     const dataDir = path.join(process.cwd(), "data");
+    console.log("Search API - Data directory:", dataDir);
 
     // Check if data directory exists
     if (!fs.existsSync(dataDir)) {
@@ -71,9 +74,20 @@ export async function GET(request: NextRequest) {
     }
 
     // Read all JSON files from data directory
-    const files = fs
-      .readdirSync(dataDir)
-      .filter((file) => file.endsWith(".json"));
+    const files = fs.readdirSync(dataDir).filter((file) => {
+      // Filtrar apenas arquivos JSON
+      if (!file.endsWith(".json")) return false;
+
+      // Excluir arquivos que contenham ".deleted." no nome
+      if (file.includes(".deleted.")) return false;
+
+      // Excluir arquivos de backup
+      if (file.includes(".backup.")) return false;
+
+      return true;
+    });
+
+    console.log("Search API - Files found:", files);
 
     const results: SearchResult[] = [];
 
@@ -82,6 +96,12 @@ export async function GET(request: NextRequest) {
       const filePath = path.join(dataDir, file);
       const fileContent = fs.readFileSync(filePath, "utf-8");
       const deal: Deal = JSON.parse(fileContent);
+
+      // Skip files that don't have the expected deal structure
+      if (!deal.addresses || !Array.isArray(deal.addresses)) {
+        console.log(`Search API - Skipping ${file}: not a valid deal file`);
+        continue;
+      }
 
       // Search for the address in this deal (case-insensitive)
       const foundAddress = deal.addresses.find(
@@ -92,6 +112,11 @@ export async function GET(request: NextRequest) {
       );
 
       if (foundAddress) {
+        console.log(
+          `Search API - Found address in ${file}:`,
+          foundAddress.address
+        );
+
         // Helper function to convert string or number to number
         const parseTokenValue = (value: string | number): number => {
           if (typeof value === "number") return value;
@@ -182,6 +207,8 @@ export async function GET(request: NextRequest) {
         // Continue without prices if CoinGecko fails
       }
     }
+
+    console.log("Search API - Results:", results.length, "deals found");
 
     return NextResponse.json({
       address,

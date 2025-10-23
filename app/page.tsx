@@ -43,7 +43,14 @@ export default function Home() {
 
   // Redirecionar para login se não estiver conectado
   useEffect(() => {
+    console.log(
+      "Redirect useEffect - authLoading:",
+      authLoading,
+      "isConnected:",
+      isConnected
+    );
     if (!authLoading && !isConnected) {
+      console.log("Redirecting to login page");
       router.push("/login");
     }
   }, [isConnected, authLoading, router]);
@@ -75,27 +82,39 @@ export default function Home() {
 
   // Buscar dados automaticamente quando conectar
   useEffect(() => {
+    console.log(
+      "Page useEffect - isConnected:",
+      isConnected,
+      "address:",
+      address
+    );
     if (isConnected && address) {
+      console.log("Page useEffect - Calling handleSearch for:", address);
       handleSearch(address);
     }
   }, [isConnected, address]);
 
   const handleSearch = async (address: string) => {
+    console.log("handleSearch called with address:", address);
     setIsLoading(true);
     setError("");
     setSearchedAddress(address);
 
     try {
+      console.log("Making API call to search endpoint");
       const response = await fetch(
         `/api/search?address=${encodeURIComponent(address)}`
       );
       const data = await response.json();
+
+      console.log("Search API response:", data);
 
       if (!response.ok) {
         throw new Error(data.error || "Erro ao buscar dados");
       }
 
       setResults(data.results || []);
+      console.log("Results set:", data.results?.length || 0, "deals");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Erro desconhecido");
       setResults([]);
