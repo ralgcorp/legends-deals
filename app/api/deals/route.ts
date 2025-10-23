@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import { getFileNameFromDealName, getDealDisplayName } from "@/utils/dealUtils";
+import { getDealDisplayName } from "@/utils/dealUtils";
 
 export async function GET() {
   try {
@@ -30,7 +30,7 @@ export async function GET() {
           const fileContent = fs.readFileSync(filePath, "utf8");
           const dealData = JSON.parse(fileContent);
 
-          // Se o arquivo tem dealName, usar ele e remover o número, senão usar o nome do arquivo
+          // Se o arquivo tem dealName, usar ele e remover o número e parênteses, senão usar o nome do arquivo
           if (dealData.dealName) {
             return getDealDisplayName(dealData.dealName);
           } else {
@@ -38,6 +38,7 @@ export async function GET() {
           }
         } catch (error) {
           // Se não conseguir ler o arquivo, usar o nome do arquivo
+          console.error(`Erro ao ler arquivo ${file}:`, error);
           return fileName;
         }
       })

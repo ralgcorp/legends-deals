@@ -1,13 +1,16 @@
 /**
  * Remove o número da DEAL do nome para criar o nome do arquivo
  * Exemplo: "#25 - ZKasino" -> "zkasino", "#30 - Teste Nova DEAL" -> "teste-nova-deal"
+ * "#03 - DIN (Web3Go)" -> "din"
  * @param dealName Nome completo da DEAL
  * @returns Nome limpo para arquivo em minúsculas com hífens
  */
 export function getFileNameFromDealName(dealName: string): string {
   // Remove padrões como "#25 - ", "#25-", "#25 ", etc.
+  // Remove conteúdo entre parênteses
   return dealName
-    .replace(/^#\d+\s*-\s*/, "")
+    .replace(/^#\d+\s*-\s*/, "") // Remove número da DEAL
+    .replace(/\s*\([^)]*\)\s*/g, "") // Remove conteúdo entre parênteses
     .trim()
     .toLowerCase()
     .replace(/\s+/g, "-"); // Substitui espaços por hífens
@@ -35,10 +38,15 @@ export function getDealNumber(dealName: string): string | null {
 /**
  * Remove o número da DEAL do nome para exibição no dropdown
  * Exemplo: "#25 - ZKasino" -> "ZKasino"
+ * "#03 - DIN (Web3Go)" -> "DIN"
  * @param dealName Nome completo da DEAL
- * @returns Nome da DEAL sem número
+ * @returns Nome da DEAL sem número e sem conteúdo entre parênteses
  */
 export function getDealDisplayName(dealName: string): string {
   // Remove padrões como "#25 - ", "#25-", "#25 ", etc.
-  return dealName.replace(/^#\d+\s*-\s*/, "").trim();
+  // Remove conteúdo entre parênteses
+  return dealName
+    .replace(/^#\d+\s*-\s*/, "") // Remove número da DEAL
+    .replace(/\s*\([^)]*\)\s*/g, "") // Remove conteúdo entre parênteses
+    .trim();
 }
