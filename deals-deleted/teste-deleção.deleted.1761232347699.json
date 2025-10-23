@@ -1,0 +1,14 @@
+{
+  "dealName": "#33 - Teste Deleção",
+  "dealNetwork": "Ethereum",
+  "FDV": "$1M",
+  "dealRound": "Private",
+  "dealVC": "Test VC",
+  "vesting": "12 months",
+  "dealTGE": "01/01/2025",
+  "dealPrice": "0.1",
+  "dealFee": "5%",
+  "dealToken": "TEST",
+  "dealStatus": "active",
+  "addresses": []
+}

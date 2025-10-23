@@ -1,0 +1,14 @@
+{
+  "dealName": "#29 - Testando",
+  "dealNetwork": "BNB Chain",
+  "FDV": "$10M",
+  "dealRound": "Seed",
+  "dealVC": "Halving Capital",
+  "vesting": "10% TGE, 3M cliff e 12M",
+  "dealTGE": "09/09/2024",
+  "dealPrice": "0.0025",
+  "dealFee": "15%",
+  "dealToken": "TESTANDO",
+  "dealStatus": "active",
+  "addresses": []
+}

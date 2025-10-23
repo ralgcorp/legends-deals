@@ -1,7 +1,52 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import { Deal, SearchResult } from "@/types";
+
+interface Address {
+  address: string;
+  totalTokens: string | number;
+  distributedTokens: string | number;
+  remainingTokens: string | number;
+}
+
+interface Deal {
+  dealName: string;
+  dealNetwork: string;
+  FDV: string;
+  dealRound: string;
+  dealVC: string;
+  vesting: string;
+  dealTGE: string;
+  dealPrice: string;
+  dealFee: string;
+  dealToken: string;
+  dealStatus: string;
+  addresses: Address[];
+  currentPrice?: number;
+  coingeckoId?: string;
+}
+
+interface SearchResult {
+  dealName: string;
+  dealNetwork?: string;
+  FDV?: string;
+  dealRound?: string;
+  dealVC?: string;
+  dealToken?: string;
+  totalTokens: number;
+  distributedTokens: number;
+  remainingTokens: number;
+  dealPrice?: string;
+  currentPrice?: string;
+  dealFee?: string;
+  allocation?: number;
+  aporte?: number;
+  performance?: number;
+  coingeckoId?: string;
+  vesting?: string;
+  dealTGE?: string;
+  dealStatus?: string;
+}
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -40,7 +85,7 @@ export async function GET(request: NextRequest) {
 
       // Search for the address in this deal (case-insensitive)
       const foundAddress = deal.addresses.find(
-        (addr) =>
+        (addr: Address) =>
           addr.address &&
           typeof addr.address === "string" &&
           addr.address.toLowerCase() === address.toLowerCase()
@@ -77,7 +122,7 @@ export async function GET(request: NextRequest) {
           distributedTokens: parseTokenValue(foundAddress.distributedTokens),
           remainingTokens: parseTokenValue(foundAddress.remainingTokens),
           dealPrice: deal.dealPrice,
-          currentPrice: deal.currentPrice,
+          currentPrice: deal.currentPrice?.toString(),
           dealFee: deal.dealFee,
           dealNetwork: deal.dealNetwork,
           FDV: deal.FDV,

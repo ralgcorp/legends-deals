@@ -1,0 +1,27 @@
+{
+  "dealName": "#32 - Agora vai",
+  "dealNetwork": "BNB Chain",
+  "FDV": "$20M",
+  "dealRound": "Seed",
+  "dealVC": "Halving Capital",
+  "vesting": "10% TGE, 3M cliff e 12M",
+  "dealTGE": "09/09/2024",
+  "dealPrice": "0.0025",
+  "dealFee": "15%",
+  "dealToken": "AGORA",
+  "dealStatus": "active",
+  "addresses": [
+    {
+      "address": "0xDb020F7AeD2159b888F31756c8da32a09334cD4B",
+      "totalTokens": "5000",
+      "distributedTokens": "0",
+      "remainingTokens": "5000"
+    },
+    {
+      "address": "0x3D0c5cf0dd00EC9F34FA2BFc25Cb9D4578447C11",
+      "totalTokens": "30000",
+      "distributedTokens": "0",
+      "remainingTokens": "30000"
+    }
+  ]
+}

@@ -1,7 +1,27 @@
 "use client";
 
-import { SearchResult } from "@/types";
 import { useState, useMemo } from "react";
+
+interface SearchResult {
+  dealName: string;
+  dealNetwork?: string;
+  FDV?: string;
+  dealRound?: string;
+  dealVC?: string;
+  dealToken?: string;
+  totalTokens: number;
+  distributedTokens: number;
+  remainingTokens: number;
+  aporte?: number;
+  currentPrice?: number;
+  performance?: number;
+  vesting?: string;
+  dealTGE?: string;
+  dealPrice?: string;
+  dealFee?: string;
+  allocation?: number;
+  dealStatus?: string;
+}
 
 interface ResultsTableProps {
   results: SearchResult[];

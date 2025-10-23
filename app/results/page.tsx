@@ -4,7 +4,26 @@ import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import ResultsTable from "@/components/ResultsTable";
 import Footer from "@/components/Footer";
-import { SearchResult } from "@/types";
+interface SearchResult {
+  dealName: string;
+  dealNetwork?: string;
+  FDV?: string;
+  dealRound?: string;
+  dealVC?: string;
+  dealToken?: string;
+  totalTokens: number;
+  distributedTokens: number;
+  remainingTokens: number;
+  aporte?: number;
+  currentPrice?: number;
+  performance?: number;
+  vesting?: string;
+  dealTGE?: string;
+  dealPrice?: string;
+  dealFee?: string;
+  allocation?: number;
+  dealStatus?: string;
+}
 import Link from "next/link";
 
 function ResultsContent() {
