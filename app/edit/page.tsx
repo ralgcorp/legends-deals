@@ -413,50 +413,58 @@ export default function EditPage() {
             <h3 className="text-lg font-medium text-gray-900 mb-4">
               Como proceder com a edição
             </h3>
-            <div className="max-w-2xl mx-auto text-left space-y-4 text-gray-600">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-blue-900 mb-2">
-                  1. Selecionar uma DEAL
-                </h4>
-                <p className="text-blue-800">
-                  Use o dropdown no topo da página para selecionar a DEAL que
-                  deseja editar. Você também pode criar uma nova DEAL clicando
-                  em &quot;Adicionar DEAL&quot;.
-                </p>
-              </div>
+            <div className="max-w-4xl mx-auto text-left text-gray-600">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
+                {/* Coluna 1 */}
+                <div className="flex flex-col space-y-4 h-full">
+                  <div className="bg-blue-50 p-4 rounded-lg flex-1 flex flex-col">
+                    <h4 className="font-semibold text-blue-900 mb-2">
+                      1. Selecionar uma DEAL
+                    </h4>
+                    <p className="text-blue-800 flex-1">
+                      Use o dropdown no topo da página para selecionar a DEAL
+                      que deseja editar. Você também pode criar uma nova DEAL
+                      clicando em &quot;Adicionar DEAL&quot;.
+                    </p>
+                  </div>
 
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-green-900 mb-2">
-                  2. Editar informações da DEAL
-                </h4>
-                <p className="text-green-800">
-                  Após selecionar uma DEAL, você poderá editar todas as
-                  informações principais como nome, rede, preço, vesting, etc.
-                  no formulário que aparecerá.
-                </p>
-              </div>
+                  <div className="bg-green-50 p-4 rounded-lg flex-1 flex flex-col">
+                    <h4 className="font-semibold text-green-900 mb-2">
+                      2. Editar informações da DEAL
+                    </h4>
+                    <p className="text-green-800 flex-1">
+                      Após selecionar uma DEAL, você poderá editar todas as
+                      informações principais como nome, rede, preço, vesting,
+                      etc. no formulário que aparecerá.
+                    </p>
+                  </div>
+                </div>
 
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-purple-900 mb-2">
-                  3. Gerenciar endereços
-                </h4>
-                <p className="text-purple-800">
-                  Na tabela de endereços, você pode adicionar novos endereços,
-                  editar valores de tokens clicando nas células, e usar a
-                  funcionalidade de distribuição para calcular porcentagens
-                  automaticamente.
-                </p>
-              </div>
+                {/* Coluna 2 */}
+                <div className="flex flex-col space-y-4 h-full">
+                  <div className="bg-purple-50 p-4 rounded-lg flex-1 flex flex-col">
+                    <h4 className="font-semibold text-purple-900 mb-2">
+                      3. Gerenciar endereços
+                    </h4>
+                    <p className="text-purple-800 flex-1">
+                      Na tabela de endereços, você pode adicionar novos
+                      endereços, editar valores de tokens clicando nas células,
+                      e usar a funcionalidade de distribuição para calcular
+                      porcentagens automaticamente.
+                    </p>
+                  </div>
 
-              <div className="bg-orange-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-orange-900 mb-2">
-                  4. Exportar e salvar
-                </h4>
-                <p className="text-orange-800">
-                  Use o botão &quot;Exportar CSV&quot; para baixar os dados da
-                  tabela. Clique em &quot;Salvar Alterações&quot; para salvar
-                  todas as modificações no sistema.
-                </p>
+                  <div className="bg-orange-50 p-4 rounded-lg flex-1 flex flex-col">
+                    <h4 className="font-semibold text-orange-900 mb-2">
+                      4. Exportar e salvar
+                    </h4>
+                    <p className="text-orange-800 flex-1">
+                      Use o botão &quot;Exportar CSV&quot; para baixar os dados
+                      da tabela. Clique em &quot;Salvar Alterações&quot; para
+                      salvar todas as modificações no sistema.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
