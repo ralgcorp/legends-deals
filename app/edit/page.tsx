@@ -210,7 +210,7 @@ export default function EditPage() {
             <div className="flex gap-3 justify-center">
               <button
                 onClick={() => router.push("/panel")}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+                className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
               >
                 Ir para Painel
               </button>
@@ -318,7 +318,7 @@ export default function EditPage() {
             <div
               className={`border rounded-lg p-4 ${
                 saveMessage.type === "success"
-                  ? "bg-green-50 border-green-200 text-green-800"
+                  ? "bg-green-50 border-green-200 text-gray-700"
                   : "bg-red-50 border-red-200 text-red-800"
               }`}
             >
@@ -396,74 +396,235 @@ export default function EditPage() {
 
         {/* Mensagem quando nenhuma DEAL está selecionada */}
         {!isLoading && !selectedDeal && (
-          <div className="text-center py-12">
-            <svg
-              className="mx-auto h-12 w-12 text-gray-400 mb-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              />
-            </svg>
-            <h3 className="text-lg font-medium text-gray-900 mb-4">
-              Como proceder com a edição
-            </h3>
-            <div className="max-w-4xl mx-auto text-left text-gray-600">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
-                {/* Coluna 1 */}
-                <div className="flex flex-col space-y-4 h-full">
-                  <div className="bg-blue-50 p-4 rounded-lg flex-1 flex flex-col">
-                    <h4 className="font-semibold text-blue-900 mb-2">
-                      1. Selecionar uma DEAL
-                    </h4>
-                    <p className="text-blue-800 flex-1">
+          <div className="w-full">
+            {/* Header da seção */}
+            <div className="text-center mb-12">
+              <div className="inline-block p-8 bg-gray-100 rounded-2xl mb-8">
+                <svg
+                  className="w-20 h-20 text-gray-600 mx-auto"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Sistema de Edição de DEALs
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Gerencie e edite todas as informações das suas DEALs de
+                investimento de forma intuitiva e eficiente. Siga os passos
+                abaixo para começar.
+              </p>
+            </div>
+
+            {/* Grid principal com 4 passos */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+              {/* Passo 1 */}
+              <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                <div className="flex items-start space-x-4">
+                  <div className="shrink-0">
+                    <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">1</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      Selecionar uma DEAL
+                    </h3>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
                       Use o dropdown no topo da página para selecionar a DEAL
                       que deseja editar. Você também pode criar uma nova DEAL
                       clicando em &quot;Adicionar DEAL&quot;.
                     </p>
+                    <div className="bg-white p-4 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        💡 Dica:
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        O sistema suporta múltiplas DEALs simultaneamente. Cada
+                        DEAL é independente e pode ser editada separadamente.
+                      </p>
+                    </div>
                   </div>
+                </div>
+              </div>
 
-                  <div className="bg-green-50 p-4 rounded-lg flex-1 flex flex-col">
-                    <h4 className="font-semibold text-green-900 mb-2">
-                      2. Editar informações da DEAL
-                    </h4>
-                    <p className="text-green-800 flex-1">
+              {/* Passo 2 */}
+              <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                <div className="flex items-start space-x-4">
+                  <div className="shrink-0">
+                    <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">2</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      Editar informações da DEAL
+                    </h3>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
                       Após selecionar uma DEAL, você poderá editar todas as
                       informações principais como nome, rede, preço, vesting,
                       etc. no formulário que aparecerá.
                     </p>
+                    <div className="bg-white p-4 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        📝 Campos disponíveis:
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Nome, Rede, FDV, Round, VC, Vesting, TGE, Preço, Taxa,
+                        Token, CoinGecko ID e Status.
+                      </p>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Coluna 2 */}
-                <div className="flex flex-col space-y-4 h-full">
-                  <div className="bg-purple-50 p-4 rounded-lg flex-1 flex flex-col">
-                    <h4 className="font-semibold text-purple-900 mb-2">
-                      3. Gerenciar endereços
-                    </h4>
-                    <p className="text-purple-800 flex-1">
+              {/* Passo 3 */}
+              <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                <div className="flex items-start space-x-4">
+                  <div className="shrink-0">
+                    <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">3</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      Gerenciar endereços
+                    </h3>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
                       Na tabela de endereços, você pode adicionar novos
                       endereços, editar valores de tokens clicando nas células,
                       e usar a funcionalidade de distribuição para calcular
                       porcentagens automaticamente.
                     </p>
+                    <div className="bg-white p-4 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        ⚡ Funcionalidades:
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        Edição inline, distribuição por porcentagem,
+                        adição/remoção de endereços e validação automática.
+                      </p>
+                    </div>
                   </div>
+                </div>
+              </div>
 
-                  <div className="bg-orange-50 p-4 rounded-lg flex-1 flex flex-col">
-                    <h4 className="font-semibold text-orange-900 mb-2">
-                      4. Exportar e salvar
-                    </h4>
-                    <p className="text-orange-800 flex-1">
+              {/* Passo 4 */}
+              <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                <div className="flex items-start space-x-4">
+                  <div className="shrink-0">
+                    <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">4</span>
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      Exportar e salvar
+                    </h3>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
                       Use o botão &quot;Exportar CSV&quot; para baixar os dados
                       da tabela. Clique em &quot;Salvar Alterações&quot; para
                       salvar todas as modificações no sistema.
                     </p>
+                    <div className="bg-white p-4 rounded-lg">
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        💾 Backup automático:
+                      </h4>
+                      <p className="text-gray-600 text-sm">
+                        O sistema cria backups automáticos antes de cada
+                        alteração para garantir a segurança dos dados.
+                      </p>
+                    </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Seção de recursos adicionais */}
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                Recursos Avançados
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg
+                      className="w-8 h-8 text-indigo-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    Análise de Performance
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Integração com CoinGecko para acompanhar a performance dos
+                    tokens em tempo real.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg
+                      className="w-8 h-8 text-emerald-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    Segurança
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Acesso restrito a carteiras autorizadas com sistema de
+                    autenticação via MetaMask.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg
+                      className="w-8 h-8 text-rose-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                      />
+                    </svg>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-2">
+                    Exportação
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Exporte dados em CSV para análise externa e relatórios
+                    personalizados.
+                  </p>
                 </div>
               </div>
             </div>
