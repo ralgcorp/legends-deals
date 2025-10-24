@@ -59,7 +59,7 @@ export default function DealEditForm({
             id="dealName"
             value={dealData.dealName || ""}
             onChange={(e) => handleFieldChange("dealName", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -76,7 +76,7 @@ export default function DealEditForm({
             id="dealNetwork"
             value={dealData.dealNetwork || ""}
             onChange={(e) => handleFieldChange("dealNetwork", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -93,7 +93,7 @@ export default function DealEditForm({
             id="FDV"
             value={dealData.FDV || ""}
             onChange={(e) => handleFieldChange("FDV", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -110,7 +110,7 @@ export default function DealEditForm({
             id="dealRound"
             value={dealData.dealRound || ""}
             onChange={(e) => handleFieldChange("dealRound", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -127,7 +127,7 @@ export default function DealEditForm({
             id="dealVC"
             value={dealData.dealVC || ""}
             onChange={(e) => handleFieldChange("dealVC", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -144,7 +144,7 @@ export default function DealEditForm({
             value={dealData.vesting || ""}
             onChange={(e) => handleFieldChange("vesting", e.target.value)}
             rows={3}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -162,7 +162,7 @@ export default function DealEditForm({
             value={dealData.dealTGE || ""}
             onChange={(e) => handleFieldChange("dealTGE", e.target.value)}
             placeholder="DD/MM/YYYY"
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -180,7 +180,7 @@ export default function DealEditForm({
             id="dealPrice"
             value={dealData.dealPrice || ""}
             onChange={(e) => handleFieldChange("dealPrice", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -197,7 +197,7 @@ export default function DealEditForm({
             id="dealFee"
             value={dealData.dealFee || ""}
             onChange={(e) => handleFieldChange("dealFee", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -214,7 +214,7 @@ export default function DealEditForm({
             id="dealToken"
             value={dealData.dealToken || ""}
             onChange={(e) => handleFieldChange("dealToken", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
 
@@ -230,7 +230,7 @@ export default function DealEditForm({
             id="dealStatus"
             value={dealData.dealStatus || ""}
             onChange={(e) => handleFieldChange("dealStatus", e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           >
             <option value="">Selecione...</option>
             <option value="active">Distribuindo</option>

@@ -266,7 +266,7 @@ export default function DealSelector({
           <select
             id="deal-select"
             onChange={(e) => handleSelect(e.target.value)}
-            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
             defaultValue=""
           >
             <option value="" disabled>
@@ -353,7 +353,7 @@ export default function DealSelector({
               value={newDealName}
               onChange={(e) => handleNewDealNameChange(e.target.value)}
               placeholder="Ex: #26 - Nova DEAL"
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
             />
           </div>
 
@@ -374,7 +374,7 @@ export default function DealSelector({
                   handleNewDealFieldChange("dealNetwork", e.target.value)
                 }
                 placeholder="Ex: Ethereum, BSC, Polygon, Arbitrum"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               />
             </div>
 
@@ -393,7 +393,7 @@ export default function DealSelector({
                   handleNewDealFieldChange("FDV", e.target.value)
                 }
                 placeholder="Ex: $50M, $100M, $500M"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               />
             </div>
 
@@ -412,7 +412,7 @@ export default function DealSelector({
                   handleNewDealFieldChange("dealRound", e.target.value)
                 }
                 placeholder="Ex: Private, Seed, Series A, Public"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               />
             </div>
 
@@ -431,7 +431,7 @@ export default function DealSelector({
                   handleNewDealFieldChange("dealVC", e.target.value)
                 }
                 placeholder="Ex: Binance Labs, a16z, Paradigm"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               />
             </div>
 
@@ -450,7 +450,7 @@ export default function DealSelector({
                   handleNewDealFieldChange("dealTGE", e.target.value)
                 }
                 placeholder="DD/MM/YYYY"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               />
             </div>
 
@@ -470,7 +470,7 @@ export default function DealSelector({
                   handleNewDealFieldChange("dealPrice", e.target.value)
                 }
                 placeholder="Ex: 0.05, 0.1, 0.25"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               />
             </div>
 
@@ -489,7 +489,7 @@ export default function DealSelector({
                   handleNewDealFieldChange("dealFee", e.target.value)
                 }
                 placeholder="Ex: 5%, 10%, 15%"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               />
             </div>
 
@@ -508,7 +508,7 @@ export default function DealSelector({
                   handleNewDealFieldChange("dealToken", e.target.value)
                 }
                 placeholder="Ex: ETH, BTC, USDC, TOKEN"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               />
             </div>
 
@@ -525,7 +525,7 @@ export default function DealSelector({
                 onChange={(e) =>
                   handleNewDealFieldChange("dealStatus", e.target.value)
                 }
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               >
                 <option value="">Selecione...</option>
                 <option value="active">Ativo</option>
@@ -552,7 +552,7 @@ export default function DealSelector({
               }
               rows={3}
               placeholder="Ex: 10% TGE, 6M cliff e 18M"
-              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
             />
           </div>
 

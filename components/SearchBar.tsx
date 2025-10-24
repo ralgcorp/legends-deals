@@ -28,7 +28,7 @@ export default function SearchBar({
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           placeholder="Digite o endereço da carteira EVM (ex: 0xba12bb8a91995c2a18a0de0083764d1d2fc9c22b)"
-          className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm text-black placeholder-black"
+          className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm text-gray-900 placeholder-gray-500"
           disabled={isLoading}
         />
         <button
