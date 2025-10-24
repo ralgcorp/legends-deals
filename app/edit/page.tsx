@@ -42,6 +42,7 @@ export default function EditPage() {
   const [selectedDeal, setSelectedDeal] = useState<string>("");
   const [dealData, setDealData] = useState<DealData | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [showNewDealForm, setShowNewDealForm] = useState(false);
   const [saveMessage, setSaveMessage] = useState<{
     type: "success" | "error";
     text: string;
@@ -360,7 +361,10 @@ export default function EditPage() {
 
         {/* Seletor de DEAL */}
         <div className="mb-8">
-          <DealSelector onDealSelect={handleDealSelect} />
+          <DealSelector
+            onDealSelect={handleDealSelect}
+            onShowNewDealForm={setShowNewDealForm}
+          />
         </div>
 
         {/* Loading */}
@@ -372,7 +376,7 @@ export default function EditPage() {
         )}
 
         {/* Formulário e tabela */}
-        {!isLoading && selectedDeal && dealData && (
+        {!isLoading && selectedDeal && dealData && !showNewDealForm && (
           <>
             {/* Formulário de edição da DEAL */}
             <div className="mb-8">
@@ -395,26 +399,11 @@ export default function EditPage() {
         )}
 
         {/* Mensagem quando nenhuma DEAL está selecionada */}
-        {!isLoading && !selectedDeal && (
+        {!isLoading && !selectedDeal && !showNewDealForm && (
           <div className="w-full">
             {/* Header da seção */}
             <div className="text-center mb-12">
-              <div className="inline-block p-8 bg-gray-100 rounded-2xl mb-8">
-                <svg
-                  className="w-20 h-20 text-gray-600 mx-auto"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
-              </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 mt-4">
                 Sistema de Edição de DEALs
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -549,7 +538,7 @@ export default function EditPage() {
             </div>
 
             {/* Seção de recursos adicionais */}
-            <div className="bg-gray-50 rounded-2xl p-8 shadow-lg">
+            <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
                 Recursos Avançados
               </h3>

@@ -28,15 +28,18 @@ interface DealData {
 interface DealSelectorProps {
   onDealSelect: (dealName: string) => void;
   onNewDeal?: (dealData: DealData) => void;
+  onShowNewDealForm?: (show: boolean) => void;
 }
 
 export default function DealSelector({
   onDealSelect,
   onNewDeal,
+  onShowNewDealForm,
 }: DealSelectorProps) {
   const [deals, setDeals] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [showNewDealForm, setShowNewDealForm] = useState(false);
+  const [selectedDeal, setSelectedDeal] = useState<string>("");
   const [newDealName, setNewDealName] = useState("");
   const [newDealData, setNewDealData] = useState<DealData>({
     dealName: "",
@@ -75,6 +78,7 @@ export default function DealSelector({
   }, []);
 
   const handleSelect = (dealName: string) => {
+    setSelectedDeal(dealName);
     if (dealName) {
       onDealSelect(dealName);
     }
@@ -167,6 +171,7 @@ export default function DealSelector({
           addresses: [],
         });
         setShowNewDealForm(false);
+        setSelectedDeal(""); // Resetar o dropdown
 
         // Selecionar a nova DEAL
         onDealSelect(newDealName);
@@ -193,6 +198,7 @@ export default function DealSelector({
 
   const handleCancelNewDeal = () => {
     setShowNewDealForm(false);
+    setSelectedDeal(""); // Resetar o dropdown
     setNewDealName("");
     setNewDealData({
       dealName: "",
@@ -209,6 +215,9 @@ export default function DealSelector({
       coingeckoId: "",
       addresses: [],
     });
+    if (onShowNewDealForm) {
+      onShowNewDealForm(false);
+    }
   };
 
   const handleDeleteDeal = (dealName: string) => {
@@ -269,9 +278,9 @@ export default function DealSelector({
         <div className="max-w-md">
           <select
             id="deal-select"
+            value={selectedDeal}
             onChange={(e) => handleSelect(e.target.value)}
             className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
-            defaultValue=""
           >
             <option value="" disabled>
               Selecione uma DEAL...
@@ -286,7 +295,13 @@ export default function DealSelector({
 
         <div className="flex gap-2">
           <button
-            onClick={() => setShowNewDealForm(!showNewDealForm)}
+            onClick={() => {
+              setShowNewDealForm(!showNewDealForm);
+              setSelectedDeal(""); // Resetar o dropdown
+              if (onShowNewDealForm) {
+                onShowNewDealForm(!showNewDealForm);
+              }
+            }}
             className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors"
           >
             <svg
