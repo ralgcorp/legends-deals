@@ -19,6 +19,7 @@ interface DealData {
   dealFee: string;
   dealToken: string;
   dealStatus: string;
+  coingeckoId?: string;
   addresses: Address[];
 }
 
@@ -40,7 +41,7 @@ export default function DealEditForm({
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6">
+    <div className="bg-white rounded-lg shadow-sm p-6 pb-10">
       <h2 className="text-lg font-semibold text-gray-900 mb-6">
         Informações da DEAL
       </h2>
@@ -139,11 +140,12 @@ export default function DealEditForm({
           >
             Vesting
           </label>
-          <textarea
+          <input
+            type="text"
             id="vesting"
             value={dealData.vesting || ""}
             onChange={(e) => handleFieldChange("vesting", e.target.value)}
-            rows={3}
+            placeholder="Ex: 10% TGE, 6M cliff e 18M"
             className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           />
         </div>
@@ -218,6 +220,24 @@ export default function DealEditForm({
           />
         </div>
 
+        {/* CoinGecko ID */}
+        <div>
+          <label
+            htmlFor="coingeckoId"
+            className="block text-sm font-medium text-gray-700 mb-2"
+          >
+            CoinGecko ID
+          </label>
+          <input
+            type="text"
+            id="coingeckoId"
+            value={dealData.coingeckoId || ""}
+            onChange={(e) => handleFieldChange("coingeckoId", e.target.value)}
+            placeholder="Ex: bitcoin, ethereum, din"
+            className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
+          />
+        </div>
+
         {/* Status */}
         <div>
           <label
@@ -233,8 +253,9 @@ export default function DealEditForm({
             className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
           >
             <option value="">Selecione...</option>
-            <option value="active">Distribuindo</option>
+            <option value="distributing">Distribuindo</option>
             <option value="completed">Completo</option>
+            <option value="awaiting TGE">Aguardando TGE</option>
             <option value="phishing">Phishing</option>
             <option value="scam">Scam</option>
             <option value="paused">Pausado</option>

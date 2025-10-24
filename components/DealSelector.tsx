@@ -21,6 +21,7 @@ interface DealData {
   dealFee: string;
   dealToken: string;
   dealStatus: string;
+  coingeckoId?: string;
   addresses: Address[];
 }
 
@@ -49,6 +50,7 @@ export default function DealSelector({
     dealFee: "",
     dealToken: "",
     dealStatus: "",
+    coingeckoId: "",
     addresses: [],
   });
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
@@ -161,6 +163,7 @@ export default function DealSelector({
           dealFee: "",
           dealToken: "",
           dealStatus: "",
+          coingeckoId: "",
           addresses: [],
         });
         setShowNewDealForm(false);
@@ -203,6 +206,7 @@ export default function DealSelector({
       dealFee: "",
       dealToken: "",
       dealStatus: "",
+      coingeckoId: "",
       addresses: [],
     });
   };
@@ -514,6 +518,25 @@ export default function DealSelector({
 
             <div>
               <label
+                htmlFor="new-deal-coingecko"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                CoinGecko ID
+              </label>
+              <input
+                type="text"
+                id="new-deal-coingecko"
+                value={newDealData.coingeckoId || ""}
+                onChange={(e) =>
+                  handleNewDealFieldChange("coingeckoId", e.target.value)
+                }
+                placeholder="Ex: bitcoin, ethereum, din"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
+              />
+            </div>
+
+            <div>
+              <label
                 htmlFor="new-deal-status"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
@@ -528,8 +551,9 @@ export default function DealSelector({
                 className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
               >
                 <option value="">Selecione...</option>
-                <option value="active">Distribuindo</option>
+                <option value="distributing">Distribuindo</option>
                 <option value="completed">Completo</option>
+                <option value="awaiting TGE">Aguardando TGE</option>
                 <option value="phishing">Phishing</option>
                 <option value="scam">Scam</option>
                 <option value="paused">Pausado</option>
@@ -544,13 +568,13 @@ export default function DealSelector({
             >
               Vesting
             </label>
-            <textarea
+            <input
+              type="text"
               id="new-deal-vesting"
               value={newDealData.vesting}
               onChange={(e) =>
                 handleNewDealFieldChange("vesting", e.target.value)
               }
-              rows={3}
               placeholder="Ex: 10% TGE, 6M cliff e 18M"
               className="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900 placeholder-gray-500"
             />
