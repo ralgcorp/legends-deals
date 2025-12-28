@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+// Forçar rota dinâmica sem cache
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 interface Address {
   address: string;
   totalTokens: string | number;

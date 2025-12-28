@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// Forçar rota dinâmica sem cache
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const ids = searchParams.get("ids");
