@@ -175,7 +175,10 @@ export async function GET(request: NextRequest) {
         const pricesResponse = await fetch(
           `https://api.coingecko.com/api/v3/simple/price?ids=${coingeckoIds.join(
             ","
-          )}&vs_currencies=usd`
+          )}&vs_currencies=usd`,
+          {
+            cache: 'no-store', // Sempre buscar preços atualizados
+          }
         );
 
         if (pricesResponse.ok) {

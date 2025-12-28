@@ -10,6 +10,8 @@
   "dealStatus": "distributing",
   "FDV": "N/A",
   "vesting": "10% TGE - 12M",
+  "dealSite": "https://playdarktimes.com",
+  "dealTwitter": "https://x.com/playDARKTIMES",
   "addresses": [
     {
       "address": "0xc26b9af0043afbb8d20f94b9b3c753aae7f2a3e9",

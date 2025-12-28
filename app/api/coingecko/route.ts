@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
     const response = await fetch(
       `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`,
       {
-        next: { revalidate: 300 }, // Cache for 5 minutes
+        cache: 'no-store', // Sempre buscar preços atualizados
       }
     );
 

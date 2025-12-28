@@ -10,7 +10,8 @@
   "dealStatus": "distributing",
   "FDV": "$250M",
   "vesting": "10% TGE - 1M cliff e 12M",
-
+  "dealSite": "https://gaimin.io",
+  "dealTwitter": "https://x.com/GAIMINglobal",
   "addresses": [
     {
       "address": "0x16eF7a6402A97f24c8733247630110a994501b10",

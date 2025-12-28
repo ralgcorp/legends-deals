@@ -10,6 +10,8 @@
   "dealStatus": "distributing",
   "FDV": "$110M",
   "vesting": "3M cliff - 50% 4o M e 18M",
+  "dealSite": "https://bento.me/lingo",
+  "dealTwitter": "https://x.com/Lingocoins",
   "addresses": [
     {
       "address": "0x27ced9c8d9d944435b589ce13f504e6f175cf672",
