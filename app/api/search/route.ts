@@ -213,11 +213,21 @@ export async function GET(request: NextRequest) {
 
     console.log("Search API - Results:", results.length, "deals found");
 
-    return NextResponse.json({
-      address,
-      results,
-      totalDeals: results.length,
-    });
+    return NextResponse.json(
+      {
+        address,
+        results,
+        totalDeals: results.length,
+      },
+      {
+        headers: {
+          "Cache-Control":
+            "no-store, no-cache, must-revalidate, proxy-revalidate",
+          Pragma: "no-cache",
+          Expires: "0",
+        },
+      }
+    );
   } catch (error) {
     console.error("Error searching for address:", error);
     return NextResponse.json(
